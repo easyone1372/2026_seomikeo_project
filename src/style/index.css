@@ -20,3 +20,16 @@ body {
   flex-direction: column;
   position: relative;
 }
+
+.other_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-image: url("/src/img_src/background_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
