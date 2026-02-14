@@ -1,0 +1,192 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.klk_content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.klk_image_box {
+  position: relative;
+  width: 1200px;
+  height: 850px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.klk_image_box:hover {
+  transform: scale(1.02);
+}
+
+/* Object 스타일 및 애니메이션 */
+.klk_object {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: slideUp 1s ease-out forwards;
+}
+
+.klk_object img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 뒤 캐릭터 컨테이너 */
+.klk_back_char {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* 뒤 캐릭터 개별 이미지 */
+.klk_back_char > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.klk_back_char img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+/* 뒤 캐릭터 순차 애니메이션 - char_1 */
+.klk_back_char > div:nth-child(1) img {
+  animation: fadeIn 0.8s ease-out 1.2s forwards;
+}
+
+/* 뒤 캐릭터 순차 애니메이션 - char_2 */
+.klk_back_char > div:nth-child(2) img {
+  animation: fadeIn 0.8s ease-out 2s forwards;
+}
+
+/* 뒤 캐릭터 순차 애니메이션 - char_3 */
+.klk_back_char > div:nth-child(3) img {
+  animation: fadeIn 0.8s ease-out 2.8s forwards;
+}
+
+/* 앞 캐릭터 컨테이너 */
+.klk_front_char {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* 앞 캐릭터 개별 이미지 */
+.klk_front_char > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.klk_front_char img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+/* 앞 캐릭터 순차 애니메이션 - char_2 (첫 번째로 나타남) */
+.klk_front_char > div:nth-child(2) img {
+  animation: fadeIn 0.8s ease-out 3.6s forwards;
+}
+
+/* 앞 캐릭터 순차 애니메이션 - char_1 (두 번째로 나타남) */
+.klk_front_char > div:nth-child(1) img {
+  animation: fadeIn 0.8s ease-out 4.4s forwards;
+}
+
+/* 앞 캐릭터 순차 애니메이션 - char_3 (세 번째로 나타남) */
+.klk_front_char > div:nth-child(3) img {
+  animation: fadeIn 0.8s ease-out 5.2s forwards;
+}
+
+/* Full Image Box - 팝업 */
+.klk_full_image_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.klk_full_image_box.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.klk_full_image {
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+.klk_full_image_box.active .klk_full_image {
+  transform: scale(1);
+}
+
+.klk_full_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 애니메이션 정의 */
+
+/* Object 슬라이드 업 애니메이션 */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In 애니메이션 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 애니메이션 완료 상태 표시 (디버깅용) */
+.klk_image_box.animation-complete {
+  /* 애니메이션이 모두 완료되면 이 클래스가 추가됨 */
+}

@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style/index.css" />
     <link rel="stylesheet" href="/src/style/font.css" />
     <link rel="stylesheet" href="/src/style/sp_header.css" />
+    <link rel="stylesheet" href="/src/style/work_klk.css" />
     <title>어... 🌞떴다.</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="other_container">
       <header>
         <nav>
@@ -22,21 +23,67 @@
           </div>
         </nav>
       </header>
+
       <main>
-          <div class="klk_content">
-              <div class="klk_image_box">
-                  <div class="klk_object">
-                      <div>산</div>
-                    </div>
-                    <div class="klk_back_char">뒤 캐릭터</div>
-                    <div class="klk_front_char">앞 캐릭터</div>
-                </div>
-                <div class="klk_full_image_box">
-                    <div class="klk_full_image">전체 이미지</div>
-                </div>
+        <div class="klk_content">
+          <div class="klk_image_box">
+            <div class="klk_object">
+              <img src="/src/img_src/klk/klk_object.png" alt="klk object" />
             </div>
+
+            <div class="klk_back_char">
+              <div>
+                <img
+                  src="/src/img_src/klk/mina_back.png"
+                  alt="klk back char 1"
+                />
+              </div>
+              <div>
+                <img
+                  src="/src/img_src/klk/serin_back.png"
+                  alt="klk back char 2"
+                />
+              </div>
+              <div>
+                <img
+                  src="/src/img_src/klk/hoyeon_back.png"
+                  alt="klk back char 3"
+                />
+              </div>
+            </div>
+
+            <div class="klk_front_char">
+              <div>
+                <img
+                  src="/src/img_src/klk/mina_front.png"
+                  alt="klk front char 1"
+                />
+              </div>
+              <div>
+                <img
+                  src="/src/img_src/klk/serin_front.png"
+                  alt="klk front char 2"
+                />
+              </div>
+              <div>
+                <img
+                  src="/src/img_src/klk/hoyeon_front.png"
+                  alt="klk front char 3"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
+      </main>
+    </div>
+
+    <div class="klk_full_image_box">
+      <div class="klk_full_image">
+        <img src="/src/img_src/klk/fullshot.png" alt="klk full image" />
+      </div>
+    </div>
+
     <script type="module" src="/dist/navigation.js"></script>
-</body>
+    <script type="module" src="/dist/work_klk.js"></script>
+  </body>
 </html>
