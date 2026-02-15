@@ -8,27 +8,27 @@ const navBtnEvent = document.addEventListener("DOMContentLoaded", () => {
   if (homeBtn) {
     homeBtn.addEventListener("click", () => {
       console.log("Home button clicked");
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
     });
   }
 
   if (workBtn) {
     workBtn.addEventListener("click", () => {
       console.log("Work button clicked");
-      window.location.href = "work.html";
+      window.location.href = "/work_page/work.html";
     });
   }
   if (formBtn) {
     formBtn.addEventListener("click", () => {
       console.log("Form button clicked");
-      window.location.href = "form.html";
+      window.location.href = "/form.html";
     });
   }
 
   if (creditBtn) {
     creditBtn.addEventListener("click", () => {
       console.log("Credit button clicked");
-      window.location.href = "credit.html";
+      window.location.href = "/credit.html";
     });
   }
 });

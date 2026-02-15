@@ -9,3 +9,88 @@
   background-attachment: fixed;
   overflow: hidden;
 }
+
+.work_content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 115px;
+  box-sizing: border-box;
+}
+
+/* 표지판 전체 컨테이너 */
+.work_signpost {
+  position: relative;
+  width: 500px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 표지판 기둥 */
+.signpost_rod {
+  position: absolute;
+  width: 450px;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signpost_rod img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 표지판 공통 스타일 */
+.signpost_sign {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.signpost_sign img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* transition: opacity 0.3s ease; */
+}
+
+/* 기본 이미지와 호버 이미지 */
+.signpost_sign .sign_basic {
+  opacity: 1;
+}
+
+.signpost_sign .sign_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* 호버 시 이미지 전환 */
+.signpost_sign:hover .sign_basic {
+  opacity: 0;
+}
+
+.signpost_sign:hover .sign_hover {
+  opacity: 1;
+}
+
+.signpost_mt {
+  top: 14%;
+  /* transform: rotate(3deg); */
+}
+
+.signpost_is {
+  top: 30%;
+  /* transform: rotate(-5deg); */
+}
