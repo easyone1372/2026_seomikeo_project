@@ -5,30 +5,37 @@ const navBtnEvent = document.addEventListener("DOMContentLoaded", () => {
   const formBtn = document.getElementById("form-btn") as HTMLAnchorElement;
   const creditBtn = document.getElementById("credit-btn") as HTMLAnchorElement;
 
+  const navigateWithTransition = (url: string) => {
+    document.body.classList.add("page-transitioning");
+    setTimeout(() => {
+      window.location.href = url;
+    }, 150);
+  };
+
   if (homeBtn) {
     homeBtn.addEventListener("click", () => {
       console.log("Home button clicked");
-      window.location.href = "/index.html";
+      navigateWithTransition("/index.html");
     });
   }
 
   if (workBtn) {
     workBtn.addEventListener("click", () => {
       console.log("Work button clicked");
-      window.location.href = "/work_page/work.html";
+      navigateWithTransition("/work_page/work.html");
     });
   }
   if (formBtn) {
     formBtn.addEventListener("click", () => {
       console.log("Form button clicked");
-      window.location.href = "/form.html";
+      navigateWithTransition("/form.html");
     });
   }
 
   if (creditBtn) {
     creditBtn.addEventListener("click", () => {
       console.log("Credit button clicked");
-      window.location.href = "/credit.html";
+      navigateWithTransition("/credit.html");
     });
   }
 });
