@@ -1,0 +1,148 @@
+.form_content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 115px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 폼 보드 이미지 */
+.form_img_box {
+  width: 1000px;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.form_img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 스탬프 공통 스타일 */
+.form_stamp_box {
+  position: absolute;
+  width: 1000px;
+  height: 800px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.form_stamp_box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+/* 기본 상태 */
+.form_stamp_box .stamp_basic {
+  opacity: 1;
+}
+
+.form_stamp_box .stamp_hover {
+  opacity: 0;
+}
+
+.form_stamp_box .stamp_click {
+  opacity: 0;
+}
+
+/* 호버 상태 */
+.form_stamp_box:hover .stamp_basic {
+  opacity: 0;
+}
+
+.form_stamp_box:hover .stamp_hover {
+  opacity: 1;
+}
+
+/* 클릭 상태 */
+.form_stamp_box.active .stamp_basic,
+.form_stamp_box.active .stamp_hover {
+  opacity: 0;
+}
+
+.form_stamp_box.active .stamp_click {
+  opacity: 1;
+}
+
+/* 클릭 상태에서도 호버 무시 */
+.form_stamp_box.active:hover .stamp_hover {
+  opacity: 0;
+}
+
+/* 팝업 스타일 */
+.form_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.form_popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 팝업 컨텐츠 */
+.popup_content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.form_popup.active .popup_content {
+  transform: scale(1);
+}
+
+.popup_content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 팝업 닫기 버튼 */
+.popup_close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #d40004;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.popup_close:hover {
+  background-color: #d40004;
+  transform: scale(1.1);
+}

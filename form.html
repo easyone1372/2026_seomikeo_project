@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/style/font.css" />
     <link rel="stylesheet" href="/src/style/sp_header.css" />
     <link rel="stylesheet" href="/src/style/sp_page_transition.css" />
-
+    <link rel="stylesheet" href="/src/style/sp_form.css" />
     <title>2026 서미커 신년 합작</title>
   </head>
   <body>
@@ -25,10 +25,72 @@
         </nav>
       </header>
 
-      <div class="form_content">
-        <h1>FORM 페이지</h1>
-      </div>
+      <main>
+        <div class="form_content">
+          <!-- 폼 보드 이미지 -->
+          <div class="form_img_box">
+            <img
+              src="/src/img_src/form/stamp/form_stamp_board.png"
+              alt="form board"
+            />
+          </div>
+
+          <!-- MT 스탬프 -->
+          <div class="form_stamp_box form_stamp_mt_box" id="stamp-mt">
+            <img
+              src="/src/img_src/form/stamp/stamp_mt_basic.png"
+              class="stamp_basic"
+              alt="MT stamp"
+            />
+            <img
+              src="/src/img_src/form/stamp/stamp_mt_hover.png"
+              class="stamp_hover"
+              alt="MT stamp hover"
+            />
+            <img
+              src="/src/img_src/form/stamp/stamp_mt_click.png"
+              class="stamp_click"
+              alt="MT stamp click"
+            />
+          </div>
+
+          <!-- IS 스탬프 -->
+          <div class="form_stamp_box form_stamp_is_box" id="stamp-is">
+            <img
+              src="/src/img_src/form/stamp/stamp_is_basic.png"
+              class="stamp_basic"
+              alt="IS stamp"
+            />
+            <img
+              src="/src/img_src/form/stamp/stamp_is_hover.png"
+              class="stamp_hover"
+              alt="IS stamp hover"
+            />
+            <img
+              src="/src/img_src/form/stamp/stamp_is_click.png"
+              class="stamp_click"
+              alt="IS stamp click"
+            />
+          </div>
+        </div>
+
+        <!-- 팝업들 -->
+        <div class="form_popup form_popup_mt">
+          <div class="popup_content">
+            <img src="/src/img_src/form/popup/popup_mt.png" alt="MT popup" />
+            <button class="popup_close">✕</button>
+          </div>
+        </div>
+
+        <div class="form_popup form_popup_is">
+          <div class="popup_content">
+            <img src="/src/img_src/form/popup/popup_is.png" alt="IS popup" />
+            <button class="popup_close">✕</button>
+          </div>
+        </div>
+      </main>
     </div>
     <script type="module" src="/dist/navigation.js"></script>
+    <script type="module" src="/dist/form_stamp.js"></script>
   </body>
 </html>
