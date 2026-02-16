@@ -28,12 +28,58 @@
 
         <main>
           <div class="work_content">
+            <!-- 배경 이미지들 -->
+            <div class="work_background">
+              <img
+                src="/src/img_src/work/mt_basic.png"
+                alt="mountain"
+                class="bg_mountain"
+              />
+              <img
+                src="/src/img_src/work/is_basic.png"
+                alt="island"
+                class="bg_island"
+              />
+            </div>
+
+            <!-- 정보 팝업들 -->
+            <div class="work_info_popup info_mountain">
+              <img
+                src="/src/img_src/work/mountain_info.png"
+                alt="mountain info"
+              />
+              <div class="work_info_btns">
+                <div class="info_mt_ok_btn">
+                  <img src="/src/img_src/work/check.png" alt="OK" />
+                  <span>OK</span>
+                </div>
+                <div class="work_back_btn">
+                  <img src="/src/img_src/work/return.png" alt="back arrow" />
+                  <span> BACK </span>
+                </div>
+              </div>
+            </div>
+            <div class="work_info_popup info_island">
+              <img src="/src/img_src/work/island_info.png" alt="island info" />
+              <div class="work_info_btns">
+                <div class="info_is_ok_btn">
+                  <img src="/src/img_src/work/check.png" alt="OK" />
+                  <span>OK</span>
+                </div>
+                <div class="work_back_btn">
+                  <img src="/src/img_src/work/return.png" alt="back arrow" />
+                  <span> BACK </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 표지판 -->
             <div class="work_signpost">
               <div class="signpost_rod">
                 <img src="/src/img_src/work/sign_rod.png" alt="signpost rod" />
               </div>
 
-              <div class="signpost_sign signpost_mt">
+              <div class="signpost_sign signpost_mt" id="sign-mt">
                 <img
                   src="/src/img_src/work/sign_mt_basic.png"
                   alt="MT sign"
@@ -45,7 +91,7 @@
                   class="sign_hover"
                 />
               </div>
-              <div class="signpost_sign signpost_is">
+              <div class="signpost_sign signpost_is" id="sign-is">
                 <img
                   src="/src/img_src/work/sign_is_basic.png"
                   alt="IS sign"
@@ -63,5 +109,6 @@
       </div>
     </div>
     <script type="module" src="/dist/navigation.js"></script>
+    <script type="module" src="/dist/work_sign.js"></script>
   </body>
 </html>
