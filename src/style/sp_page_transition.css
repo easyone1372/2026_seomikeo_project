@@ -8,8 +8,6 @@ header,
 }
 
 /* 메인 컨텐츠만 fade in */
-.main_logo_box,
-.main_buttons,
 .work_signpost,
 .credit_content {
   animation: fadeInContent 0.4s ease-out;
