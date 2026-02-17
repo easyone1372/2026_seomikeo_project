@@ -26,16 +26,22 @@ class WorkSignpost {
         const mtOkBtn = document.querySelector(".info_mt_ok_btn");
         if (mtOkBtn) {
             mtOkBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // 팝업 닫기 방지
-                window.location.href = "./work_klk.html";
+                e.stopPropagation();
+                document.body.classList.add("page-transitioning");
+                setTimeout(() => {
+                    window.location.href = "/2026_SMK_project/work_page/work_klk.html";
+                }, 150);
             });
         }
         // IS OK 버튼 - work_bbjh.html로 이동
         const isOkBtn = document.querySelector(".info_is_ok_btn");
         if (isOkBtn) {
             isOkBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // 팝업 닫기 방지
-                window.location.href = "./work_bbjh.html";
+                e.stopPropagation();
+                document.body.classList.add("page-transitioning");
+                setTimeout(() => {
+                    window.location.href = "/2026_SMK_project/work_page/work_bbjh.html";
+                }, 150);
             });
         }
         // BACK 버튼들 - 초기 화면으로 복귀
