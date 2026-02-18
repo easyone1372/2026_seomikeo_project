@@ -98,6 +98,14 @@
   animation: mainFadeIn 0.5s ease-out 0.9s forwards;
 }
 
+.logo_subtitle:last-child {
+  font-size: 13px;
+  font-weight: 400;
+  color: #757575;
+  margin-top: 8px;
+  animation: mainFadeIn 0.5s ease-out 0.9s forwards;
+}
+
 /* 페이지 전환 시 메인 요소 fade out */
 body.page-transitioning .main_logo_2026,
 body.page-transitioning .main_logo_horse,
