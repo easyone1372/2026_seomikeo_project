@@ -1,8 +1,10 @@
 declare class FormStamp {
     private stampMt;
     private stampIs;
+    private stampNv;
     private popupMt;
     private popupIs;
+    private popupNv;
     constructor();
     private init;
     private openPopup;

@@ -54,8 +54,20 @@ class BbjhAnimation {
 
       // 팝업 배경 클릭 시 닫기
       this.fullImageBox.addEventListener("click", (e: MouseEvent) => {
-        // 배경(fullImageBox)을 직접 클릭한 경우만 닫기
-        if (e.target === this.fullImageBox) {
+        const target = e.target as HTMLElement;
+
+        // 링크 아이콘이나 그 자식 요소를 클릭한 경우 팝업 닫지 않음
+        if (target.closest(".bbjh_full_link_icon")) {
+          console.log("링크 아이콘 클릭됨, 팝업 유지");
+          return;
+        }
+
+        // 배경이나 이미지를 클릭한 경우만 닫기
+        if (
+          e.target === this.fullImageBox ||
+          target.classList.contains("bbjh_full_image") ||
+          target.closest(".bbjh_full_image > img")
+        ) {
           console.log("팝업 배경 클릭, 닫기");
           this.hideFullImage();
         }

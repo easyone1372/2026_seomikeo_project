@@ -3,14 +3,18 @@
 class FormStamp {
   private stampMt: HTMLElement | null;
   private stampIs: HTMLElement | null;
+  private stampNv: HTMLElement | null;
   private popupMt: HTMLElement | null;
   private popupIs: HTMLElement | null;
+  private popupNv: HTMLElement | null;
 
   constructor() {
     this.stampMt = document.getElementById("stamp-mt");
     this.stampIs = document.getElementById("stamp-is");
+    this.stampNv = document.getElementById("stamp-nv");
     this.popupMt = document.querySelector(".form_popup_mt");
     this.popupIs = document.querySelector(".form_popup_is");
+    this.popupNv = document.querySelector(".form_popup_nv");
 
     this.init();
   }
@@ -27,6 +31,13 @@ class FormStamp {
     if (this.stampIs) {
       this.stampIs.addEventListener("click", () => {
         this.openPopup("is");
+      });
+    }
+
+    // NV 스탬프 클릭
+    if (this.stampNv) {
+      this.stampNv.addEventListener("click", () => {
+        this.openPopup("nv");
       });
     }
 
@@ -55,6 +66,19 @@ class FormStamp {
       });
     }
 
+    if (this.popupNv) {
+      this.popupNv.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement;
+        // 링크 아이콘 클릭은 제외
+        if (target.closest(".popup_icon")) {
+          return;
+        }
+        if (e.target === this.popupNv) {
+          this.closeAllPopups();
+        }
+      });
+    }
+
     // ESC 키로 팝업 닫기
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
@@ -63,23 +87,37 @@ class FormStamp {
     });
   }
 
-  private openPopup(type: "mt" | "is"): void {
+  private openPopup(type: "mt" | "is" | "nv"): void {
     if (type === "mt") {
       // MT 스탬프 클릭 상태로 변경
       this.stampMt?.classList.add("active");
       this.stampIs?.classList.remove("active");
+      this.stampNv?.classList.remove("active");
 
       // MT 팝업 표시
       this.popupMt?.classList.add("active");
       this.popupIs?.classList.remove("active");
-    } else {
+      this.popupNv?.classList.remove("active");
+    } else if (type === "is") {
       // IS 스탬프 클릭 상태로 변경
       this.stampIs?.classList.add("active");
       this.stampMt?.classList.remove("active");
+      this.stampNv?.classList.remove("active");
 
       // IS 팝업 표시
       this.popupIs?.classList.add("active");
       this.popupMt?.classList.remove("active");
+      this.popupNv?.classList.remove("active");
+    } else if (type === "nv") {
+      // NV 스탬프 클릭 상태로 변경
+      this.stampNv?.classList.add("active");
+      this.stampMt?.classList.remove("active");
+      this.stampIs?.classList.remove("active");
+
+      // NV 팝업 표시
+      this.popupNv?.classList.add("active");
+      this.popupMt?.classList.remove("active");
+      this.popupIs?.classList.remove("active");
     }
 
     // 스크롤 방지
@@ -90,10 +128,12 @@ class FormStamp {
     // 모든 팝업 닫기
     this.popupMt?.classList.remove("active");
     this.popupIs?.classList.remove("active");
+    this.popupNv?.classList.remove("active");
 
     // 모든 스탬프 초기 상태로
     this.stampMt?.classList.remove("active");
     this.stampIs?.classList.remove("active");
+    this.stampNv?.classList.remove("active");
 
     // 스크롤 복원
     document.body.style.overflow = "";

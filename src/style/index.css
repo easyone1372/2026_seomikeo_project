@@ -29,6 +29,7 @@ body {
   /* justify-content: center; */
   /* align-items: center; */
   background-image: url("/2026_SMK_project/src/img_src/background_img.png");
+  /* background-image: url("../img_src/background_img.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

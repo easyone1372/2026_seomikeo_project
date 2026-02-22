@@ -29,7 +29,8 @@ class WorkSignpost {
                 e.stopPropagation();
                 document.body.classList.add("page-transitioning");
                 setTimeout(() => {
-                    window.location.href = "/2026_SMK_project/work_page/work_klk.html";
+                    // window.location.href = "/2026_SMK_project/work_page/work_klk.html";
+                    window.location.href = "./work_klk.html";
                 }, 150);
             });
         }
@@ -40,7 +41,8 @@ class WorkSignpost {
                 e.stopPropagation();
                 document.body.classList.add("page-transitioning");
                 setTimeout(() => {
-                    window.location.href = "/2026_SMK_project/work_page/work_bbjh.html";
+                    // window.location.href = "/2026_SMK_project/work_page/work_bbjh.html";
+                    window.location.href = "./work_bbjh.html";
                 }, 150);
             });
         }

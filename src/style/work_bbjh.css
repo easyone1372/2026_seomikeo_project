@@ -120,7 +120,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 9000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -145,7 +145,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
+  /* pointer-events: none; */
+  position: relative;
 }
 
 .bbjh_full_image_box.active .bbjh_full_image {
@@ -158,6 +159,38 @@ body {
   object-fit: contain;
   max-height: 75vh;
   pointer-events: none; /* 이미지도 마우스 이벤트 무시 */
+}
+
+/* 링크 아이콘 (오른쪽 상단) */
+.bbjh_full_link_icon {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 180px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10001;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: auto !important; /* 링크 아이콘은 클릭 가능 */
+}
+
+.bbjh_full_image_box.active .bbjh_full_link_icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bbjh_full_link_icon:hover {
+  transform: scale(1.1);
+}
+
+.bbjh_full_link_icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  pointer-events: auto;
 }
 
 /* 애니메이션 정의 */

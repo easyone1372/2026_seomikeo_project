@@ -88,6 +88,7 @@
   font-family: "AkiraExpanded";
   src: url("/2026_SMK_project/src/font/AkiraExpandedDemo.otf")
     format("opentype");
+  /* src: url("/src/font/AkiraExpandedDemo.otf") format("opentype"); */
   font-weight: 900;
   font-style: normal;
   font-display: swap;
