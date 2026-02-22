@@ -82,29 +82,21 @@ body {
   bottom: 0;
 }
 
-/* 애니메이션 순서: 캐릭터1 -> 말 -> 캐릭터4 -> 캐릭터3 -> 캐릭터2 */
-
-/* 캐릭터 1 (첫 번째, 0s 시작) */
 .bbjh_char1 img {
   animation: fadeIn 0.8s ease-out 0s forwards;
 }
 
-/* 말 (두 번째, 0.8s 시작) */
 .bbjh_horse img {
   animation: fadeIn 0.8s ease-out 0.8s forwards;
 }
 
-/* 캐릭터 4 (세 번째, 1.6s 시작) */
 .bbjh_char4 img {
   animation: fadeIn 0.8s ease-out 1.6s forwards;
 }
-
-/* 캐릭터 3 (네 번째, 2.4s 시작) */
 .bbjh_char3 img {
   animation: fadeIn 0.8s ease-out 2.4s forwards;
 }
 
-/* 캐릭터 2 (다섯 번째, 3.2s 시작) */
 .bbjh_char2 img {
   animation: fadeIn 0.8s ease-out 3.2s forwards;
 }
@@ -136,7 +128,6 @@ body {
 .bbjh_full_image {
   max-width: 80%;
   max-height: 80vh;
-  /* background-color: #fff; */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -145,7 +136,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* pointer-events: none; */
   position: relative;
 }
 
@@ -158,7 +148,7 @@ body {
   height: 100%;
   object-fit: contain;
   max-height: 75vh;
-  pointer-events: none; /* 이미지도 마우스 이벤트 무시 */
+  pointer-events: none;
 }
 
 /* 링크 아이콘 (오른쪽 상단) */
@@ -173,7 +163,7 @@ body {
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.3s ease;
-  pointer-events: auto !important; /* 링크 아이콘은 클릭 가능 */
+  pointer-events: auto !important;
 }
 
 .bbjh_full_image_box.active .bbjh_full_link_icon {

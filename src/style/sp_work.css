@@ -3,7 +3,6 @@
   width: 100%;
   height: 100vh;
   background-image: url("/2026_SMK_project/src/img_src/background_img.png");
-  /* background-image: url("../img_src/background_img.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,7 +65,7 @@
     transform 0.5s ease;
 }
 
-/* MT 정보 팝업 - 오른쪽 아래 */
+/* MT 정보 팝업  */
 .info_mountain {
   right: 8%;
   bottom: 20%;
@@ -79,7 +78,7 @@
   transform: translateY(0) scale(1);
 }
 
-/* IS 정보 팝업 - 왼쪽 아래 */
+/* IS 정보 팝업  */
 .info_island {
   left: 8%;
   bottom: 20%;
@@ -121,7 +120,6 @@
   font-family: "SlowGothic", sans-serif;
   font-size: 48px;
   letter-spacing: 2px;
-  /* font-weight: bold; */
 }
 
 .info_mt_ok_btn img,

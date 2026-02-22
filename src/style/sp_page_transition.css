@@ -13,7 +13,7 @@ header,
   animation: fadeInContent 0.4s ease-out;
 }
 
-/* work 페이지의 배경 이미지와 팝업은 기본적으로 숨김 (애니메이션 없음) */
+/* work 페이지의 배경 이미지와 팝업은 기본적으로 숨김  */
 .work_background,
 .work_info_popup {
   animation: none !important;

@@ -158,7 +158,6 @@ body.page-transitioning .main_buttons {
   }
 }
 
-/* 메뉴 버튼 */
 .main_buttons {
   display: flex;
   justify-content: center;

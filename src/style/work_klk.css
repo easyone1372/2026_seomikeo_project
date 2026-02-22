@@ -103,17 +103,14 @@ body {
   opacity: 0;
 }
 
-/* 앞 캐릭터 순차 애니메이션 - char_2 (첫 번째로 나타남) */
 .klk_front_char > div:nth-child(2) img {
   animation: fadeIn 0.8s ease-out 3.6s forwards;
 }
 
-/* 앞 캐릭터 순차 애니메이션 - char_1 (두 번째로 나타남) */
 .klk_front_char > div:nth-child(1) img {
   animation: fadeIn 0.8s ease-out 4.4s forwards;
 }
 
-/* 앞 캐릭터 순차 애니메이션 - char_3 (세 번째로 나타남) */
 .klk_front_char > div:nth-child(3) img {
   animation: fadeIn 0.8s ease-out 5.2s forwards;
 }
