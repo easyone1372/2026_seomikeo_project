@@ -6,8 +6,8 @@ const navBtnEvent = document.addEventListener("DOMContentLoaded", () => {
   const creditBtn = document.getElementById("credit-btn") as HTMLAnchorElement;
 
   // 로컬 서버용 현재 위치가 work_page 안인지 확인
-  const isInWorkPage = window.location.pathname.includes("/work_page/");
-  const prefix = isInWorkPage ? "../" : "./";
+  // const isInWorkPage = window.location.pathname.includes("/work_page/");
+  // const prefix = isInWorkPage ? "../" : "./";
 
   const navigateWithTransition = (url: string) => {
     document.body.classList.add("page-transitioning");
